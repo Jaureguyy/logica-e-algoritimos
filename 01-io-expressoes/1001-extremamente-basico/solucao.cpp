@@ -7,5 +7,5 @@ int main()
 
     cin >> A >> B;
 
-    cout << "X= " << A + B << endl;
+    cout << "X = " << A + B << endl;
 }
