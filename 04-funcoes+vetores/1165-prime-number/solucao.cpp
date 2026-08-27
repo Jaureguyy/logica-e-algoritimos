@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+bool ehPrimo(int n);
+
+
 int main(){
 
     int N, X, divisores;
@@ -8,18 +11,26 @@ int main(){
     cin >> N;
 
     for(int i=0; i<N; i++){
-        divisores=0;
         cin >> X;
-        for(int i=1; i<=X; i++){
-            if(X%i==0){
-                divisores++;
-            }
-        }
-        if(divisores==2){
+
+        if(ehPrimo(X)){
             cout << X << " eh primo" << endl;
         }
         else{
             cout << X << " nao eh primo" << endl;
         }
     }
+}
+
+bool ehPrimo(int n){
+    
+    int divisores=0;
+    
+    for(int i=1; i<=n; i++){
+        if(n%i==0){
+            divisores++;
+        }
+    }
+
+    return divisores==2;
 }
