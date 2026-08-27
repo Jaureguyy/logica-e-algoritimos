@@ -6,7 +6,7 @@ bool ehPrimo(int n);
 
 int main(){
 
-    int N, X, divisores;
+    int N, X;
 
     cin >> N;
 
