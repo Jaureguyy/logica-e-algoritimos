@@ -1,23 +1,37 @@
-    #include <iostream>
-    using namespace std;
+#include <iostream>
+using namespace std;
 
-    int main(){
+int posicaoMenor(int v[],int tamanho);
 
-        int N, menor;
+int main(){
 
-        cin >> N;
-        int X[N];
+    int N;
+    cin >> N;
 
-        for(int i=0; i<N; i++){
-            cin >> X[i];
-            if(i==0){
-                menor=i;
-            }
-            else if(X[i]<X[menor]){
-                menor=i;
-            }
-        }
+    int X[N];
 
-        cout << "Menor valor: " << X[menor] << endl;
-        cout << "Posicao: " << menor << endl;
+    for(int i=0; i<N; i++){
+        cin >> X[i];
     }
+
+    cout << "Menor valor: " << X[posicaoMenor(X, N)] << endl;
+    cout << "Posicao: " << posicaoMenor(X, N) << endl;
+
+
+}
+
+
+int posicaoMenor(int v[], int tamanho){
+    int menor;
+
+    for(int i=0; i<tamanho; i++){
+        if(i==0){
+            menor=0;
+        }
+        if(v[menor]>v[i]){
+            menor=i;
+        }
+    }
+
+    return menor;
+}
