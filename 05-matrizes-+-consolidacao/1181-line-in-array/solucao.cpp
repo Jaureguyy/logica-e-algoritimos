@@ -17,7 +17,7 @@ int main(){
         cout << somaLinha(m, linha) << endl;
     }
     else if(operacao=='M'){
-        cout << somaLinha(m, linha);
+        cout << somaLinha(m, linha)/12;
     }
     
 }
